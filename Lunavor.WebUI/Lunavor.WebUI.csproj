@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lunavor.Business\Lunavor.Business.csproj" />
+    <ProjectReference Include="..\Lunavor.Core\Lunavor.Core.csproj" />
+    <ProjectReference Include="..\Lunavor.Entities\Lunavor.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

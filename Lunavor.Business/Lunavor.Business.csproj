@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lunavor.Core\Lunavor.Core.csproj" />
+    <ProjectReference Include="..\Lunavor.DataAccess\Lunavor.DataAccess.csproj" />
+    <ProjectReference Include="..\Lunavor.Entities\Lunavor.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,177 @@
+/* Tablet ve Küçük Ekranlar */
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding: 100px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .service-card {
+        margin-bottom: 30px;
+    }
+
+    .portfolio-item {
+        margin-bottom: 30px;
+    }
+
+    .blog-card {
+        margin-bottom: 30px;
+    }
+}
+
+/* Mobil Ekranlar */
+@media (max-width: 767.98px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .hero-section {
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .service-card {
+        text-align: center;
+    }
+
+    .service-icon {
+        margin: 0 auto 1.5rem;
+    }
+
+    .portfolio-overlay {
+        opacity: 1;
+        background: rgba(44, 62, 80, 0.8);
+    }
+
+    .blog-card {
+        text-align: center;
+    }
+
+    .contact-info {
+        margin-bottom: 30px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+/* Çok Küçük Ekranlar */
+@media (max-width: 575.98px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .portfolio-item {
+        margin-bottom: 20px;
+    }
+
+    .blog-card {
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/* Yüksek Çözünürlüklü Ekranlar */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    .hero-section {
+        padding: 200px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 4rem;
+    }
+}
+
+/* Büyük Ekranlar (1200px ve üstü) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .hero-section h1 {
+        font-size: 4rem;
+    }
+
+    .service-card {
+        padding: 3rem;
+    }
+}
+
+/* Yükseklik Bazlı Medya Sorguları */
+@media (max-height: 600px) {
+    .hero-section {
+        min-height: auto;
+        padding: 4rem 0;
+    }
+
+    .hero-buttons {
+        margin-top: 1rem;
+    }
+}
+
+/* Yatay Mobil Görünüm */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        padding: 4rem 0;
+    }
+
+    .hero-buttons .btn {
+        display: inline-block;
+        width: auto;
+        margin-right: 1rem;
+    }
+}
+
+/* Karanlık Mod Desteği */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1a1a1a;
+        --text-color: #ffffff;
+    }
+
+    .service-card {
+        background-color: #2d2d2d;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .service-card:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+} 

@@ -1,0 +1,182 @@
+@{
+    ViewData["Title"] = "Blog";
+}
+
+<!-- Hero Section -->
+<section class="page-hero">
+    <div class="container">
+        <h1>Blog</h1>
+        <p>Teknoloji ve dijital dönüşüm hakkında güncel yazılar</p>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section class="blog-section py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Blog Posts -->
+            <div class="col-lg-8">
+                <!-- Featured Post -->
+                <div class="blog-card featured mb-5">
+                    <img src="/img/blog/featured.jpg" alt="Featured Post">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> 15 Mart 2024</span>
+                            <span class="blog-category"><i class="far fa-folder"></i> Teknoloji</span>
+                        </div>
+                        <h3>2024'te Yazılım Geliştirme Trendleri</h3>
+                        <p>Yapay zeka, bulut teknolojileri ve düşük kodlu geliştirme platformları gibi teknolojilerin yazılım dünyasını nasıl şekillendirdiğini inceliyoruz.</p>
+                        <a href="#" class="btn btn-primary">Devamını Oku</a>
+                    </div>
+                </div>
+
+                <!-- Regular Posts -->
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="blog-card">
+                            <img src="/img/blog/post1.jpg" alt="Blog Post 1">
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date"><i class="far fa-calendar"></i> 10 Mart 2024</span>
+                                    <span class="blog-category"><i class="far fa-folder"></i> Web Geliştirme</span>
+                                </div>
+                                <h4>Modern Web Framework'leri Karşılaştırması</h4>
+                                <p>React, Angular ve Vue.js gibi popüler framework'lerin avantaj ve dezavantajlarını karşılaştırıyoruz.</p>
+                                <a href="#" class="btn btn-outline-primary">Devamını Oku</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <div class="blog-card">
+                            <img src="/img/blog/post2.jpg" alt="Blog Post 2">
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date"><i class="far fa-calendar"></i> 5 Mart 2024</span>
+                                    <span class="blog-category"><i class="far fa-folder"></i> Mobil</span>
+                                </div>
+                                <h4>Mobil Uygulama Geliştirmede Yeni Yaklaşımlar</h4>
+                                <p>Cross-platform geliştirme araçları ve native uygulama geliştirme arasındaki farkları inceliyoruz.</p>
+                                <a href="#" class="btn btn-outline-primary">Devamını Oku</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <div class="blog-card">
+                            <img src="/img/blog/post3.jpg" alt="Blog Post 3">
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date"><i class="far fa-calendar"></i> 1 Mart 2024</span>
+                                    <span class="blog-category"><i class="far fa-folder"></i> Güvenlik</span>
+                                </div>
+                                <h4>Siber Güvenlikte Son Gelişmeler</h4>
+                                <p>Yapay zeka destekli güvenlik çözümleri ve siber tehditlere karşı korunma yöntemleri.</p>
+                                <a href="#" class="btn btn-outline-primary">Devamını Oku</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <div class="blog-card">
+                            <img src="/img/blog/post4.jpg" alt="Blog Post 4">
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date"><i class="far fa-calendar"></i> 25 Şubat 2024</span>
+                                    <span class="blog-category"><i class="far fa-folder"></i> Dijital Dönüşüm</span>
+                                </div>
+                                <h4>Dijital Dönüşümde Başarı Faktörleri</h4>
+                                <p>İşletmelerin dijital dönüşüm sürecinde dikkat etmesi gereken kritik noktalar.</p>
+                                <a href="#" class="btn btn-outline-primary">Devamını Oku</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <nav aria-label="Blog pagination">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Önceki</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Sonraki</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Search Widget -->
+                <div class="sidebar-widget mb-4">
+                    <h4>Arama</h4>
+                    <form class="search-form">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Ara...">
+                            <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="sidebar-widget mb-4">
+                    <h4>Kategoriler</h4>
+                    <ul class="category-list">
+                        <li><a href="#">Teknoloji <span>(15)</span></a></li>
+                        <li><a href="#">Web Geliştirme <span>(8)</span></a></li>
+                        <li><a href="#">Mobil <span>(6)</span></a></li>
+                        <li><a href="#">Güvenlik <span>(4)</span></a></li>
+                        <li><a href="#">Dijital Dönüşüm <span>(7)</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Recent Posts Widget -->
+                <div class="sidebar-widget mb-4">
+                    <h4>Son Yazılar</h4>
+                    <div class="recent-posts">
+                        <div class="recent-post-item">
+                            <img src="/img/blog/small1.jpg" alt="Recent Post 1">
+                            <div class="recent-post-content">
+                                <h6><a href="#">Yapay Zeka ve Gelecek</a></h6>
+                                <span class="date">12 Mart 2024</span>
+                            </div>
+                        </div>
+                        <div class="recent-post-item">
+                            <img src="/img/blog/small2.jpg" alt="Recent Post 2">
+                            <div class="recent-post-content">
+                                <h6><a href="#">Bulut Teknolojileri</a></h6>
+                                <span class="date">8 Mart 2024</span>
+                            </div>
+                        </div>
+                        <div class="recent-post-item">
+                            <img src="/img/blog/small3.jpg" alt="Recent Post 3">
+                            <div class="recent-post-content">
+                                <h6><a href="#">DevOps Pratikleri</a></h6>
+                                <span class="date">3 Mart 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tags Widget -->
+                <div class="sidebar-widget">
+                    <h4>Etiketler</h4>
+                    <div class="tags">
+                        <a href="#" class="tag">Teknoloji</a>
+                        <a href="#" class="tag">Yazılım</a>
+                        <a href="#" class="tag">Web</a>
+                        <a href="#" class="tag">Mobil</a>
+                        <a href="#" class="tag">AI</a>
+                        <a href="#" class="tag">Cloud</a>
+                        <a href="#" class="tag">Security</a>
+                        <a href="#" class="tag">DevOps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 

@@ -1,0 +1,52 @@
+﻿@model Lunavor.Core.Models.ErrorViewModel
+@{
+    ViewData["Title"] = "Hata";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mt-5">
+                <div class="card-body text-center">
+                    <h1 class="text-danger">Hata</h1>
+                    <h2 class="text-danger">İsteğiniz işlenirken bir hata oluştu.</h2>
+
+                    @if (Model.ShowRequestId)
+                    {
+                        <p>
+                            <strong>İstek ID:</strong> <code>@Model.RequestId</code>
+                        </p>
+                    }
+
+                    <div class="mt-4">
+                        <a href="/" class="btn btn-primary">Ana Sayfaya Dön</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (User.IsInRole("Admin"))
+{
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Geliştirici Modu</h3>
+                        <p>
+                            <strong>Development</strong> ortamına geçiş yaparak hatanın detaylı bilgilerini görebilirsiniz.
+                        </p>
+                        <p>
+                            <strong>Development</strong> ortamı canlı uygulamalarda etkinleştirilmemelidir.
+                            Bu, kullanıcılara hassas hata bilgilerinin gösterilmesine neden olabilir.
+                            Yerel geliştirme için, <strong>ASPNETCORE_ENVIRONMENT</strong> ortam değişkenini <strong>Development</strong> olarak ayarlayın
+                            ve uygulamayı yeniden başlatın.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[ŞİRKET İSMİ] - Proje Portföyü ve Referanslar">
+    <title>Portföy - [ŞİRKET İSMİ]</title>
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">[ŞİRKET İSMİ]</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Ana Sayfa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="hizmetler.html">Hizmetlerimiz</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="portfoy.html">Portföy</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="hakkimizda.html">Hakkımızda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Portföy</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Ana Sayfa</a></li>
+                    <li class="breadcrumb-item active">Portföy</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section py-5">
+        <div class="container">
+            <!-- Portfolio Filter -->
+            <div class="portfolio-filter text-center mb-5">
+                <button class="btn btn-outline-primary active" data-filter="all">Tümü</button>
+                <button class="btn btn-outline-primary" data-filter="web">Web Tasarım</button>
+                <button class="btn btn-outline-primary" data-filter="mobile">Mobil Uygulama</button>
+                <button class="btn btn-outline-primary" data-filter="erp">ERP/CRM</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="row g-4">
+                <!-- Web Project 1 -->
+                <div class="col-md-6 col-lg-4 portfolio-item" data-category="web">
+                    <div class="portfolio-card animate-on-scroll">
+                        <div class="portfolio-image">
+                            <img src="../assets/img/portfolio/web1.jpg" alt="E-ticaret Projesi" class="img-fluid">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="portfolio-link" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>E-ticaret Projesi</h3>
+                            <p>Web Tasarım</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Project 1 -->
+                <div class="col-md-6 col-lg-4 portfolio-item" data-category="mobile">
+                    <div class="portfolio-card animate-on-scroll">
+                        <div class="portfolio-image">
+                            <img src="../assets/img/portfolio/mobile1.jpg" alt="Fitness Uygulaması" class="img-fluid">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="portfolio-link" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Fitness Uygulaması</h3>
+                            <p>Mobil Uygulama</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ERP Project 1 -->
+                <div class="col-md-6 col-lg-4 portfolio-item" data-category="erp">
+                    <div class="portfolio-card animate-on-scroll">
+                        <div class="portfolio-image">
+                            <img src="../assets/img/portfolio/erp1.jpg" alt="ERP Sistemi" class="img-fluid">
+                            <div class="portfolio-overlay">
+                                <a href="#" class="portfolio-link" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>ERP Sistemi</h3>
+                            <p>Kurumsal Yazılım</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more portfolio items here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Modals -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="portfolioModal1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">E-ticaret Projesi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../assets/img/portfolio/web1.jpg" alt="E-ticaret Projesi" class="img-fluid">
+                    <div class="portfolio-details mt-4">
+                        <h4>Proje Detayları</h4>
+                        <p>Modern ve kullanıcı dostu bir e-ticaret platformu geliştirdik. Proje kapsamında:</p>
+                        <ul>
+                            <li>Responsive tasarım</li>
+                            <li>Ödeme sistemi entegrasyonu</li>
+                            <li>Stok yönetimi</li>
+                            <li>Müşteri yönetimi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add more modals for other portfolio items -->
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2>Projenizi Hayata Geçirelim</h2>
+                    <p class="lead">Size özel çözümler için hemen iletişime geçin.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="iletisim.html" class="btn btn-primary btn-lg">İletişime Geçin</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>[ŞİRKET İSMİ]</h5>
+                    <p>Profesyonel web geliştirme ve yazılım hizmetleri.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>İletişim</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Adres bilgisi<br>
+                        <i class="fas fa-phone"></i> +90 5XX XXX XX XX<br>
+                        <i class="fas fa-envelope"></i> info@sirketismi.com
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Sosyal Medya</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/905XXXXXXXXX" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html> 

@@ -1,0 +1,133 @@
+@{
+    ViewData["Title"] = "Portföy";
+}
+
+<!-- Hero Section -->
+<section class="page-hero">
+    <div class="container">
+        <h1>Portföyümüz</h1>
+        <p>Başarıyla tamamladığımız projelerimiz</p>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="portfolio-section py-5">
+    <div class="container">
+        <!-- Portfolio Filter -->
+        <div class="portfolio-filter text-center mb-5">
+            <button class="btn btn-outline-primary active" data-filter="all">Tümü</button>
+            <button class="btn btn-outline-primary" data-filter="web">Web Tasarım</button>
+            <button class="btn btn-outline-primary" data-filter="mobile">Mobil Uygulama</button>
+            <button class="btn btn-outline-primary" data-filter="software">Yazılım</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="row g-4">
+            <!-- Web Design Projects -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="web">
+                <img src="/img/portfolio/web1.jpg" alt="Web Projesi 1">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-content">
+                        <h4>E-Ticaret Platformu</h4>
+                        <p>Modern ve kullanıcı dostu e-ticaret çözümü</p>
+                        <a href="#" class="btn btn-light">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="web">
+                <img src="/img/portfolio/web2.jpg" alt="Web Projesi 2">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-content">
+                        <h4>Kurumsal Web Sitesi</h4>
+                        <p>Profesyonel kurumsal kimlik tasarımı</p>
+                        <a href="#" class="btn btn-light">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile App Projects -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="mobile">
+                <img src="/img/portfolio/mobile1.jpg" alt="Mobil Uygulama 1">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-content">
+                        <h4>Fitness Uygulaması</h4>
+                        <p>Kişiselleştirilmiş fitness deneyimi</p>
+                        <a href="#" class="btn btn-light">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="mobile">
+                <img src="/img/portfolio/mobile2.jpg" alt="Mobil Uygulama 2">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-content">
+                        <h4>Yemek Sipariş Uygulaması</h4>
+                        <p>Hızlı ve kolay sipariş sistemi</p>
+                        <a href="#" class="btn btn-light">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Software Projects -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="software">
+                <img src="/img/portfolio/software1.jpg" alt="Yazılım Projesi 1">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-content">
+                        <h4>ERP Sistemi</h4>
+                        <p>Kurumsal kaynak planlama çözümü</p>
+                        <a href="#" class="btn btn-light">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="software">
+                <img src="/img/portfolio/software2.jpg" alt="Yazılım Projesi 2">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-content">
+                        <h4>CRM Yazılımı</h4>
+                        <p>Müşteri ilişkileri yönetim sistemi</p>
+                        <a href="#" class="btn btn-light">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section py-5">
+    <div class="container text-center">
+        <h2>Projenizi Hayata Geçirelim</h2>
+        <p>Size özel çözümler için hemen iletişime geçin</p>
+        <a href="/iletisim" class="btn btn-primary btn-lg">İletişime Geçin</a>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        // Portfolio Filter
+        document.querySelectorAll('.portfolio-filter button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.portfolio-filter button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                
+                // Show/hide portfolio items
+                document.querySelectorAll('.portfolio-item').forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+} 

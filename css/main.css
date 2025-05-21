@@ -1,0 +1,384 @@
+/* Genel Stiller */
+:root {
+    --primary-color: #1A237E;    /* Lacivert */
+    --secondary-color: #283593;  /* Kurumsal mavi */
+    --accent-color: #00BCD4;     /* Turkuaz */
+    --accent-color-2: #0097A7;   /* Koyu Turkuaz */
+    --text-color: #263238;       /* Antrasit */
+    --light-color: #ECEFF1;      /* Açık gri */
+    --light-color-2: #CFD8DC;    /* Daha açık gri */
+    --white-color: #FFFFFF;      /* Beyaz */
+    --dark-color: #263238;       /* Siyah/Antrasit koyu */
+    --success-color: #4CAF50;    /* Yeşil */
+    --warning-color: #FF9800;    /* Turuncu */
+    --danger-color: #F44336;     /* Kırmızı */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--light-color);
+}
+
+/* Header ve Navigasyon */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--white-color) !important; /* Logo rengi beyaz */
+}
+
+.nav-link {
+    color: var(--light-color-2) !important; /* Navigasyon linkleri açık gri */
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-color) !important; /* Hover ve aktif link turkuaz */
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(26, 35, 126, 0.9), rgba(26, 35, 126, 0.9)), url('../img/hero-bg.jpg'); /* Lacivert overlay */
+    background-size: cover;
+    background-position: center;
+    color: var(--white-color); /* Metin rengi beyaz */
+    padding: 150px 0;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.hero-buttons .btn {
+    margin-right: 1rem;
+    padding: 0.8rem 2rem;
+}
+
+/* Hizmetler */
+.services-section {
+    background-color: var(--light-color); /* Açık gri arka plan */
+    padding: 5rem 0;
+}
+
+.section-title {
+    color: var(--dark-color); /* Bölüm başlığı antrasit */
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color); /* Başlık alt çizgi turkuaz */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.service-card {
+    background: var(--white-color); /* Kart arka planı beyaz */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid var(--light-color-2); /* Kenarlık açık gri */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--secondary-color); /* Hoverda kenarlık kurumsal mavi */
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--secondary-color); /* İkon rengi kurumsal mavi */
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    color: var(--dark-color); /* Kart başlığı antrasit */
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: var(--text-color); /* Kart metni antrasit */
+}
+
+.service-features {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.service-features li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-color); /* Liste elemanı metni antrasit */
+}
+
+.service-features li:before {
+    content: "✓";
+    color: var(--accent-color); /* Liste işareti turkuaz */
+    position: absolute;
+    left: 0;
+}
+
+/* Portföy */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 35, 126, 0.9); /* Lacivert overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: var(--white-color); /* Overlay metni beyaz */
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h3 {
+    color: var(--white-color);
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-overlay p {
+    color: var(--light-color-2); /* Overlay açıklama açık gri */
+}
+
+/* Blog */
+.blog-section {
+     background-color: var(--light-color); /* Açık gri arka plan */
+     padding: 5rem 0;
+}
+.blog-card {
+    background: var(--white-color); /* Kart arka planı beyaz */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--light-color-2); /* Kenarlık açık gri */
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-color: var(--secondary-color); /* Hoverda kenarlık kurumsal mavi */
+}
+
+.blog-card img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-content h3 a {
+    color: var(--dark-color); /* Blog başlığı link rengi antrasit */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-content h3 a:hover {
+    color: var(--secondary-color); /* Hoverda kurumsal mavi */
+}
+
+.blog-meta {
+    font-size: 0.9rem;
+    color: var(--text-color); /* Meta metin rengi antrasit */
+    margin-bottom: 1rem;
+}
+
+.blog-meta span {
+    margin-right: 1rem;
+}
+
+.blog-meta i {
+    color: var(--accent-color); /* Meta ikon rengi turkuaz */
+    margin-right: 0.3rem;
+}
+
+/* Hakkımızda */
+.about-section {
+     background-color: var(--light-color); /* Açık gri arka plan */
+     padding: 5rem 0;
+}
+
+.about-section h2 {
+     color: var(--dark-color); /* Başlık antrasit */
+}
+
+.about-section p {
+     color: var(--text-color); /* Metin antrasit */
+     margin-bottom: 1.5rem;
+}
+
+/* İletişim */
+.contact-section {
+     background-color: var(--light-color); /* Açık gri arka plan */
+     padding: 5rem 0;
+}
+
+.contact-info {
+    background: var(--white-color); /* Arka plan beyaz */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--light-color-2); /* Kenarlık açık gri */
+    margin-bottom: 2rem; /* Form ile arasına boşluk */
+}
+
+.contact-info h4 {
+    color: var(--secondary-color); /* Başlık kurumsal mavi */
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    color: var(--text-color); /* Metin antrasit */
+    margin-bottom: 1rem;
+}
+
+.contact-info p i {
+    color: var(--accent-color); /* İkon turkuaz */
+    margin-right: 0.8rem;
+}
+
+.contact-form {
+    background: var(--white-color); /* Arka plan beyaz */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--light-color-2); /* Kenarlık açık gri */
+}
+
+.contact-form h4 {
+    color: var(--secondary-color); /* Başlık kurumsal mavi */
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    color: var(--text-color); /* Etiket antrasit */
+    font-weight: 500;
+}
+
+.form-control {
+    border-color: var(--light-color-2); /* Form kontrol kenarlık açık gri */
+}
+
+.form-control:focus {
+    border-color: var(--accent-color); /* Focusda turkuaz */
+    box-shadow: 0 0 0 0.25rem rgba(0, 188, 212, 0.25); /* Turkuaz gölge */
+}
+
+.contact-form .btn-primary {
+     width: 100%; /* Buton tam genişlikte */
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color); /* Lacivert arka plan */
+    color: var(--light-color-2); /* Metin açık gri */
+    padding: 3rem 0;
+}
+
+.footer h5 {
+    color: var(--white-color); /* Başlık beyaz */
+    margin-bottom: 1rem;
+}
+
+.footer p {
+     color: var(--light-color-2); /* Metin açık gri */
+}
+
+.social-links a {
+    color: var(--light-color-2); /* Sosyal ikonlar açık gri */
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color); /* Hoverda turkuaz */
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--success-color); /* Yeşil */
+    color: var(--white-color); /* Beyaz */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    color: var(--white-color);
+    background-color: #388E3C; /* Daha koyu yeşil */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Responsive Ayarlamalar (responsive.css dosyasında detaylandırılacak) */
+/* Burada genel responsive mantığına uygun temel ayarlar olabilir */
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+} 
